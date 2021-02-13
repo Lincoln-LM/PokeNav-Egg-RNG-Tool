@@ -204,6 +204,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(679, 27);
             this.label4.Name = "label4";
@@ -331,6 +332,7 @@
             // 
             // Delay
             // 
+            this.Delay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Delay.Location = new System.Drawing.Point(722, 24);
             this.Delay.Maximum = new decimal(new int[] {
             500,
