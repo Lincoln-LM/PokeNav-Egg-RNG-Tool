@@ -1,6 +1,6 @@
 # PokeNav-Egg-RNG-Tool
 English tool used for RNGing eggs in Emerald
-[!Screenshot](https://media.discordapp.net/attachments/755945443531423796/810072137343828008/unknown.png?width=925&height=473)
+![Screenshot](https://media.discordapp.net/attachments/755945443531423796/810072137343828008/unknown.png?width=925&height=473)
 
 Credit: 
 Jellal/Porta_14 for basically all of the design choices and the icon for the program
