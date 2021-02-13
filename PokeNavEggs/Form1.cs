@@ -162,6 +162,8 @@ namespace PokeNavEggs
             uint genderRatio = ratios[GenderRatioCB.SelectedIndex];
             PokeRNG rng = new PokeRNG(0);
             rng.advance(startingFrame + calibration + delay);
+            startingFrame += delay;
+            lastFrame += delay;
 
             for (uint frame = startingFrame; frame <= lastFrame; frame++)
             {
@@ -185,7 +187,7 @@ namespace PokeNavEggs
                 }
                 if (flag)
                 {
-                    int row = dataGridView1.Rows.Add(state.Frame, state.Index, state.EggRand, state.PID, state.Nature, state.Ability, state.Gender, state.Call);
+                    int row = dataGridView1.Rows.Add(state.Frame-delay, state.Index+delay, state.EggRand, state.PID, state.Nature, state.Ability, state.Gender, state.Call);
                     dataGridView1.Rows[row].DefaultCellStyle.BackColor = shinyColor[state.Shiny];
                 }
                 rng.nextUInt();
