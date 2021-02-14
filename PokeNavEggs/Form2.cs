@@ -50,5 +50,21 @@ namespace PokeNavEggs
             }
             return checks;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int x = 0; x < checkedListBox1.Items.Count; x++)
+            {
+                checkedListBox1.SetItemCheckState(x, CheckState.Checked);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int x = 0; x < checkedListBox1.Items.Count; x++)
+            {
+                checkedListBox1.SetItemCheckState(x, CheckState.Unchecked);
+            }
+        }
     }
 }
