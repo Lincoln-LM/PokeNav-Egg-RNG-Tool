@@ -112,11 +112,11 @@ namespace PokeNavEggs
         public List<uint> ratios = new List<uint> { 255, 127, 192, 63, 31, 0, 254 };
         public List<string> trainers = new List<string> { "Call" };
 
-        private State Generate(uint frame, int targetFrame, PokeRNG baserng, bool hasLightningRod, uint compatability, uint genderRatio, uint tid, uint sid, List<string> trainerlist)
+        private State Generate(uint frame, uint targetFrame, PokeRNG baserng, bool hasLightningRod, uint compatability, uint genderRatio, uint tid, uint sid, List<string> trainerlist)
         {
             State result = new State
             {
-                Index = targetFrame - (int)frame,
+                Index = (int)frame - (int)targetFrame,
                 PID = "---",
                 Nature = "---",
                 Ability = "---",
@@ -153,7 +153,7 @@ namespace PokeNavEggs
             dataGridView1.Rows.Clear();
             uint startingFrame = (uint)StartingFrame.Value;
             uint lastFrame = (uint)EndingFrame.Value;
-            int targetFrame = (int)TargetFrame.Value;
+            uint targetFrame = (uint)TargetFrame.Value;
             uint calibration = (uint)Calibration.Value;
             uint delay = (uint)Delay.Value;
             uint tid = (uint)TID.Value;
@@ -167,7 +167,7 @@ namespace PokeNavEggs
 
             for (uint frame = startingFrame; frame <= lastFrame; frame++)
             {
-                State state = Generate(frame, targetFrame, rng, HasLightningRod.Checked, compatability, genderRatio, tid, sid, trainers);
+                State state = Generate(frame, targetFrame+delay+delay, rng, HasLightningRod.Checked, compatability, genderRatio, tid, sid, trainers);
                 bool flag = true;
                 if (AbilityCB.Text != "Any" & AbilityCB.Text != state.Ability)
                 {
@@ -210,6 +210,70 @@ namespace PokeNavEggs
             formPopup.ShowDialog();
             trainers = formPopup.getTrainers();
             trainersChecked = formPopup.getTrainersChecked();
+        }
+
+        private void datagrive_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex != -1 && e.RowIndex != -1 && e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                DataGridViewCell c = (sender as DataGridView)[e.ColumnIndex, e.RowIndex];
+                if (!c.Selected)
+                {
+                    c.DataGridView.ClearSelection();
+                    c.DataGridView.CurrentCell = c;
+                    c.Selected = true;
+                }
+            }
+        }
+
+        private void hitFrameChangeDelayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var a = dataGridView1.SelectedCells;
+            if (a.Count > 1)
+            {
+                MessageBox.Show("Please only select one cell in the row of the hit frame.");
+            }
+            else if (a.Count == 0)
+            {
+                MessageBox.Show("Please select a cell in the row of the hit frame.");
+            }
+            else
+            {
+                int index = int.Parse(a[0].OwningRow.Cells[1].Value.ToString());
+                Delay.Value = Delay.Value + index > 0 ? Delay.Value + index : 0;
+                TargetFrame.Value = TargetFrame.Value - index > 0 ? TargetFrame.Value - index : 0;
+            }
+        }
+        private void setTargetFrameChangeDelayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var a = dataGridView1.SelectedCells;
+            if (a.Count > 1)
+            {
+                MessageBox.Show("Please only select one cell in the row of the target frame.");
+            }
+            else if (a.Count == 0)
+            {
+                MessageBox.Show("Please select a cell in the row of the target frame.");
+            }
+            else
+            {
+                int index = int.Parse(a[0].OwningRow.Cells[0].Value.ToString());
+                TargetFrame.Value = index;
+            }
+        }
+
+        private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex != -1 && e.RowIndex != -1 && e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                DataGridViewCell c = (sender as DataGridView)[e.ColumnIndex, e.RowIndex];
+                if (!c.Selected)
+                {
+                    c.DataGridView.ClearSelection();
+                    c.DataGridView.CurrentCell = c;
+                    c.Selected = true;
+                }
+            }
         }
     }
 }

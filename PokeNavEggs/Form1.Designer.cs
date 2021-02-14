@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.StartingFrame = new System.Windows.Forms.NumericUpDown();
             this.EndingFrame = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +48,17 @@
             this.TID = new System.Windows.Forms.NumericUpDown();
             this.SID = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EggRand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Call = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Menu1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.setTargetFrameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hitFrameChangeDelayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Delay = new System.Windows.Forms.NumericUpDown();
             this.NatureCB = new System.Windows.Forms.ComboBox();
             this.ShinyCB = new System.Windows.Forms.ComboBox();
@@ -62,14 +74,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.GenderRatioCB = new System.Windows.Forms.ComboBox();
             this.GenderCB = new System.Windows.Forms.ComboBox();
-            this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EggRand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Call = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.StartingFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EndingFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TargetFrame)).BeginInit();
@@ -78,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Menu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Delay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -324,11 +329,83 @@
             this.Ability,
             this.Gender,
             this.Call});
+            this.dataGridView1.ContextMenuStrip = this.Menu1;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(24, 149);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(757, 335);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            // 
+            // Frame
+            // 
+            this.Frame.HeaderText = "Frame";
+            this.Frame.Name = "Frame";
+            this.Frame.Width = 105;
+            // 
+            // Index
+            // 
+            this.Index.HeaderText = "Index";
+            this.Index.Name = "Index";
+            this.Index.Width = 60;
+            // 
+            // EggRand
+            // 
+            this.EggRand.HeaderText = "Egg Rand";
+            this.EggRand.Name = "EggRand";
+            this.EggRand.Width = 80;
+            // 
+            // PID
+            // 
+            this.PID.HeaderText = "PID";
+            this.PID.Name = "PID";
+            this.PID.Width = 90;
+            // 
+            // Nature
+            // 
+            this.Nature.HeaderText = "Nature";
+            this.Nature.Name = "Nature";
+            this.Nature.Width = 70;
+            // 
+            // Ability
+            // 
+            this.Ability.HeaderText = "Ability";
+            this.Ability.Name = "Ability";
+            this.Ability.Width = 70;
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.Width = 70;
+            // 
+            // Call
+            // 
+            this.Call.HeaderText = "Call";
+            this.Call.Name = "Call";
+            this.Call.Width = 150;
+            // 
+            // Menu1
+            // 
+            this.Menu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setTargetFrameToolStripMenuItem,
+            this.hitFrameChangeDelayToolStripMenuItem});
+            this.Menu1.Name = "Menu1";
+            this.Menu1.Size = new System.Drawing.Size(211, 70);
+            // 
+            // setTargetFrameToolStripMenuItem
+            // 
+            this.setTargetFrameToolStripMenuItem.Name = "setTargetFrameToolStripMenuItem";
+            this.setTargetFrameToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.setTargetFrameToolStripMenuItem.Text = "Set Target Frame";
+            this.setTargetFrameToolStripMenuItem.Click += new System.EventHandler(this.setTargetFrameChangeDelayToolStripMenuItem_Click);
+            // 
+            // hitFrameChangeDelayToolStripMenuItem
+            // 
+            this.hitFrameChangeDelayToolStripMenuItem.Name = "hitFrameChangeDelayToolStripMenuItem";
+            this.hitFrameChangeDelayToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.hitFrameChangeDelayToolStripMenuItem.Text = "Hit Frame (Change Delay)";
+            this.hitFrameChangeDelayToolStripMenuItem.Click += new System.EventHandler(this.hitFrameChangeDelayToolStripMenuItem_Click);
             // 
             // Delay
             // 
@@ -533,54 +610,6 @@
             this.GenderCB.TabIndex = 40;
             this.GenderCB.Tag = "Any";
             // 
-            // Frame
-            // 
-            this.Frame.HeaderText = "Frame";
-            this.Frame.Name = "Frame";
-            this.Frame.Width = 105;
-            // 
-            // Index
-            // 
-            this.Index.HeaderText = "Index";
-            this.Index.Name = "Index";
-            this.Index.Width = 60;
-            // 
-            // EggRand
-            // 
-            this.EggRand.HeaderText = "Egg Rand";
-            this.EggRand.Name = "EggRand";
-            this.EggRand.Width = 80;
-            // 
-            // PID
-            // 
-            this.PID.HeaderText = "PID";
-            this.PID.Name = "PID";
-            this.PID.Width = 90;
-            // 
-            // Nature
-            // 
-            this.Nature.HeaderText = "Nature";
-            this.Nature.Name = "Nature";
-            this.Nature.Width = 70;
-            // 
-            // Ability
-            // 
-            this.Ability.HeaderText = "Ability";
-            this.Ability.Name = "Ability";
-            this.Ability.Width = 70;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.Width = 70;
-            // 
-            // Call
-            // 
-            this.Call.HeaderText = "Call";
-            this.Call.Name = "Call";
-            this.Call.Width = 150;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +659,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Menu1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Delay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -679,6 +709,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ability;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Call;
+        private System.Windows.Forms.ContextMenuStrip Menu1;
+        private System.Windows.Forms.ToolStripMenuItem setTargetFrameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hitFrameChangeDelayToolStripMenuItem;
     }
 }
 
