@@ -88,7 +88,7 @@
             // 
             // StartingFrame
             // 
-            this.StartingFrame.Location = new System.Drawing.Point(101, 24);
+            this.StartingFrame.Location = new System.Drawing.Point(99, 24);
             this.StartingFrame.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -110,7 +110,7 @@
             // 
             // EndingFrame
             // 
-            this.EndingFrame.Location = new System.Drawing.Point(234, 24);
+            this.EndingFrame.Location = new System.Drawing.Point(232, 24);
             this.EndingFrame.Maximum = new decimal(new int[] {
             1316134911,
             2328,
@@ -134,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 29);
+            this.label1.Location = new System.Drawing.Point(210, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 17);
             this.label1.TabIndex = 2;
@@ -163,7 +163,7 @@
             0,
             0});
             this.TargetFrame.Name = "TargetFrame";
-            this.TargetFrame.Size = new System.Drawing.Size(89, 20);
+            this.TargetFrame.Size = new System.Drawing.Size(105, 20);
             this.TargetFrame.TabIndex = 4;
             this.TargetFrame.Value = new decimal(new int[] {
             100,
@@ -174,7 +174,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(198, 52);
+            this.label3.Location = new System.Drawing.Point(211, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 5;
@@ -182,14 +182,14 @@
             // 
             // PlusMinus
             // 
-            this.PlusMinus.Location = new System.Drawing.Point(220, 52);
+            this.PlusMinus.Location = new System.Drawing.Point(232, 50);
             this.PlusMinus.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.PlusMinus.Name = "PlusMinus";
-            this.PlusMinus.Size = new System.Drawing.Size(72, 20);
+            this.PlusMinus.Size = new System.Drawing.Size(74, 20);
             this.PlusMinus.TabIndex = 6;
             this.PlusMinus.Value = new decimal(new int[] {
             15,
@@ -199,7 +199,7 @@
             // 
             // PlusMinusButton
             // 
-            this.PlusMinusButton.Location = new System.Drawing.Point(298, 52);
+            this.PlusMinusButton.Location = new System.Drawing.Point(312, 51);
             this.PlusMinusButton.Name = "PlusMinusButton";
             this.PlusMinusButton.Size = new System.Drawing.Size(25, 20);
             this.PlusMinusButton.TabIndex = 7;
@@ -391,7 +391,7 @@
             this.setTargetFrameToolStripMenuItem,
             this.hitFrameChangeDelayToolStripMenuItem});
             this.Menu1.Name = "Menu1";
-            this.Menu1.Size = new System.Drawing.Size(211, 70);
+            this.Menu1.Size = new System.Drawing.Size(211, 48);
             // 
             // setTargetFrameToolStripMenuItem
             // 
