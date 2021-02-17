@@ -258,7 +258,7 @@ namespace PokeNavEggs
             {
                 int index = int.Parse(a[0].OwningRow.Cells[1].Value.ToString());
                 Delay.Value = Delay.Value + index > 0 ? Delay.Value + index : 0;
-                TargetFrame.Value = TargetFrame.Value - index > 0 ? TargetFrame.Value - index : 0;
+                TargetFrame.Value = TargetFrame.Value - index > 1 ? TargetFrame.Value - index : 1;
             }
         }
         private void setTargetFrameChangeDelayToolStripMenuItem_Click(object sender, EventArgs e)
