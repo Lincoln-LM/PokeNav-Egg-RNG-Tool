@@ -39,14 +39,11 @@
             this.PlusMinus = new System.Windows.Forms.NumericUpDown();
             this.PlusMinusButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.HasLightningRod = new System.Windows.Forms.CheckBox();
             this.CompatabilityCB = new System.Windows.Forms.ComboBox();
             this.Calibration = new System.Windows.Forms.NumericUpDown();
             this.GenerateButton = new System.Windows.Forms.Button();
-            this.TrainersButton = new System.Windows.Forms.Button();
+            this.ProfilesButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.TID = new System.Windows.Forms.NumericUpDown();
-            this.SID = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,20 +64,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.GenderRatioCB = new System.Windows.Forms.ComboBox();
             this.GenderCB = new System.Windows.Forms.ComboBox();
+            this.ProfileCB = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StartingFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EndingFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TargetFrame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlusMinus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calibration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Menu1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Delay)).BeginInit();
@@ -199,7 +193,7 @@
             // 
             // PlusMinusButton
             // 
-            this.PlusMinusButton.Location = new System.Drawing.Point(312, 51);
+            this.PlusMinusButton.Location = new System.Drawing.Point(312, 50);
             this.PlusMinusButton.Name = "PlusMinusButton";
             this.PlusMinusButton.Size = new System.Drawing.Size(25, 20);
             this.PlusMinusButton.TabIndex = 7;
@@ -211,20 +205,11 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(679, 27);
+            this.label4.Location = new System.Drawing.Point(176, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Delay:";
-            // 
-            // HasLightningRod
-            // 
-            this.HasLightningRod.AutoSize = true;
-            this.HasLightningRod.Location = new System.Drawing.Point(259, 79);
-            this.HasLightningRod.Name = "HasLightningRod";
-            this.HasLightningRod.Size = new System.Drawing.Size(15, 14);
-            this.HasLightningRod.TabIndex = 9;
-            this.HasLightningRod.UseVisualStyleBackColor = true;
             // 
             // CompatabilityCB
             // 
@@ -260,7 +245,7 @@
             // GenerateButton
             // 
             this.GenerateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GenerateButton.Location = new System.Drawing.Point(553, 105);
+            this.GenerateButton.Location = new System.Drawing.Point(554, 105);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(227, 21);
             this.GenerateButton.TabIndex = 12;
@@ -268,16 +253,16 @@
             this.GenerateButton.UseVisualStyleBackColor = true;
             this.GenerateButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // TrainersButton
+            // ProfilesButton
             // 
-            this.TrainersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TrainersButton.Location = new System.Drawing.Point(553, 78);
-            this.TrainersButton.Name = "TrainersButton";
-            this.TrainersButton.Size = new System.Drawing.Size(227, 21);
-            this.TrainersButton.TabIndex = 13;
-            this.TrainersButton.Text = "Trainers";
-            this.TrainersButton.UseVisualStyleBackColor = true;
-            this.TrainersButton.Click += new System.EventHandler(this.TrainersButton_Click);
+            this.ProfilesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProfilesButton.Location = new System.Drawing.Point(554, 78);
+            this.ProfilesButton.Name = "ProfilesButton";
+            this.ProfilesButton.Size = new System.Drawing.Size(227, 21);
+            this.ProfilesButton.TabIndex = 13;
+            this.ProfilesButton.Text = "Profiles";
+            this.ProfilesButton.UseVisualStyleBackColor = true;
+            this.ProfilesButton.Click += new System.EventHandler(this.ProfilesButton_Click);
             // 
             // label5
             // 
@@ -287,32 +272,6 @@
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Calibration:";
-            // 
-            // TID
-            // 
-            this.TID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TID.Location = new System.Drawing.Point(455, 25);
-            this.TID.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.TID.Name = "TID";
-            this.TID.Size = new System.Drawing.Size(89, 20);
-            this.TID.TabIndex = 15;
-            // 
-            // SID
-            // 
-            this.SID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SID.Location = new System.Drawing.Point(584, 24);
-            this.SID.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.SID.Name = "SID";
-            this.SID.Size = new System.Drawing.Size(89, 20);
-            this.SID.TabIndex = 15;
             // 
             // dataGridView1
             // 
@@ -410,7 +369,7 @@
             // Delay
             // 
             this.Delay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delay.Location = new System.Drawing.Point(722, 24);
+            this.Delay.Location = new System.Drawing.Point(219, 76);
             this.Delay.Maximum = new decimal(new int[] {
             500,
             0,
@@ -452,7 +411,7 @@
             "Sassy",
             "Careful",
             "Quirky"});
-            this.NatureCB.Location = new System.Drawing.Point(455, 78);
+            this.NatureCB.Location = new System.Drawing.Point(456, 78);
             this.NatureCB.Name = "NatureCB";
             this.NatureCB.Size = new System.Drawing.Size(89, 21);
             this.NatureCB.TabIndex = 24;
@@ -468,7 +427,7 @@
             "Star",
             "Square",
             "Star/Square"});
-            this.ShinyCB.Location = new System.Drawing.Point(455, 105);
+            this.ShinyCB.Location = new System.Drawing.Point(456, 105);
             this.ShinyCB.Name = "ShinyCB";
             this.ShinyCB.Size = new System.Drawing.Size(89, 21);
             this.ShinyCB.TabIndex = 25;
@@ -483,7 +442,7 @@
             "Any",
             "1",
             "2"});
-            this.AbilityCB.Location = new System.Drawing.Point(455, 51);
+            this.AbilityCB.Location = new System.Drawing.Point(456, 51);
             this.AbilityCB.Name = "AbilityCB";
             this.AbilityCB.Size = new System.Drawing.Size(89, 21);
             this.AbilityCB.TabIndex = 26;
@@ -493,7 +452,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(413, 108);
+            this.label7.Location = new System.Drawing.Point(414, 108);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 13);
             this.label7.TabIndex = 27;
@@ -503,7 +462,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(412, 54);
+            this.label8.Location = new System.Drawing.Point(413, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 28;
@@ -513,7 +472,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(407, 81);
+            this.label9.Location = new System.Drawing.Point(408, 81);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 13);
             this.label9.TabIndex = 29;
@@ -528,15 +487,6 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Frame Range:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(174, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Lightning Rod?";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -546,31 +496,11 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Compatability:";
             // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(421, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 13);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "TID:";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(550, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "SID:";
-            // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(550, 54);
+            this.label14.Location = new System.Drawing.Point(551, 54);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 13);
             this.label14.TabIndex = 39;
@@ -589,7 +519,7 @@
             "87.5% ♂ / 12.5% ♀",
             "100% ♂",
             "100% ♀"});
-            this.GenderRatioCB.Location = new System.Drawing.Point(598, 50);
+            this.GenderRatioCB.Location = new System.Drawing.Point(599, 50);
             this.GenderRatioCB.Name = "GenderRatioCB";
             this.GenderRatioCB.Size = new System.Drawing.Size(130, 21);
             this.GenderRatioCB.TabIndex = 38;
@@ -604,24 +534,44 @@
             "Any",
             "♂",
             "♀"});
-            this.GenderCB.Location = new System.Drawing.Point(734, 50);
+            this.GenderCB.Location = new System.Drawing.Point(735, 50);
             this.GenderCB.Name = "GenderCB";
             this.GenderCB.Size = new System.Drawing.Size(46, 21);
             this.GenderCB.TabIndex = 40;
             this.GenderCB.Tag = "Any";
+            // 
+            // ProfileCB
+            // 
+            this.ProfileCB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProfileCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProfileCB.FormattingEnabled = true;
+            this.ProfileCB.Location = new System.Drawing.Point(456, 23);
+            this.ProfileCB.Name = "ProfileCB";
+            this.ProfileCB.Size = new System.Drawing.Size(325, 21);
+            this.ProfileCB.TabIndex = 41;
+            this.ProfileCB.Tag = "Any";
+            this.ProfileCB.SelectedIndexChanged += new System.EventHandler(this.ProfileCB_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(411, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Profile:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 514);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.ProfileCB);
             this.Controls.Add(this.GenderCB);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.GenderRatioCB);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -631,14 +581,11 @@
             this.Controls.Add(this.NatureCB);
             this.Controls.Add(this.Delay);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.SID);
-            this.Controls.Add(this.TID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TrainersButton);
+            this.Controls.Add(this.ProfilesButton);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.Calibration);
             this.Controls.Add(this.CompatabilityCB);
-            this.Controls.Add(this.HasLightningRod);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PlusMinusButton);
             this.Controls.Add(this.PlusMinus);
@@ -656,8 +603,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.TargetFrame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlusMinus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Calibration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Menu1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Delay)).EndInit();
@@ -677,14 +622,11 @@
         private System.Windows.Forms.NumericUpDown PlusMinus;
         private System.Windows.Forms.Button PlusMinusButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox HasLightningRod;
         private System.Windows.Forms.ComboBox CompatabilityCB;
         private System.Windows.Forms.NumericUpDown Calibration;
         private System.Windows.Forms.Button GenerateButton;
-        private System.Windows.Forms.Button TrainersButton;
+        private System.Windows.Forms.Button ProfilesButton;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown TID;
-        private System.Windows.Forms.NumericUpDown SID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.NumericUpDown Delay;
         private System.Windows.Forms.ComboBox NatureCB;
@@ -694,10 +636,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox GenderRatioCB;
         private System.Windows.Forms.ComboBox GenderCB;
@@ -712,6 +651,8 @@
         private System.Windows.Forms.ContextMenuStrip Menu1;
         private System.Windows.Forms.ToolStripMenuItem setTargetFrameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hitFrameChangeDelayToolStripMenuItem;
+        private System.Windows.Forms.ComboBox ProfileCB;
+        private System.Windows.Forms.Label label10;
     }
 }
 

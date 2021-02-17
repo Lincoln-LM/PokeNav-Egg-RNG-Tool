@@ -29,143 +29,141 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.SubmitButton = new System.Windows.Forms.Button();
-            this.SelectButton = new System.Windows.Forms.Button();
-            this.ClearButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProfileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LightningRod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Roaming = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountOfTrainers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NewButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.DoneButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkedListBox1
+            // dataGridView1
             // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Aroma Lady Rose",
-            "Ruin Maniac Andres",
-            "Ruin Maniac Dusty",
-            "Tuber Lola\t",
-            "Tuber Ricky",
-            "Sis and Bro Lila & Roy",
-            "Cool Trainer Cristin",
-            "Cool Trainer Brooke",
-            "Cool Trainer Wilton",
-            "Hex Maniac Valerie",
-            "Lady Cindy",
-            "Beauty Thalia",
-            "Beauty Jessica",
-            "Rich Boy Winston",
-            "Pokemaniac Steve",
-            "Swimmer Tony",
-            "Black Belt Nob",
-            "Black Belt Koji",
-            "Guitarist Fernando",
-            "Guitarist Dalton",
-            "Kindler Bernie",
-            "Camper Ethan",
-            "Old Couple John & Jay",
-            "Bug Maniac Jeffrey",
-            "Psychic Cameron",
-            "Psychic Jacki",
-            "Gentleman Walter",
-            "School Kid Karen",
-            "School Kid Jerry",
-            "Sr. and Jr. Anna & Meg",
-            "Pokefan Isabel",
-            "Pokefan Miguel",
-            "Expert Timothy",
-            "Expert Shelby",
-            "Youngster Calvin",
-            "Fisherman Elliot",
-            "Triathlete Isaiah",
-            "Triathlete Maria",
-            "Triathlete Abigail",
-            "Triathlete Dylan",
-            "Triathlete Katelyn",
-            "Triathlete Benjamin",
-            "Triathlete Pablo",
-            "Dragon Tamer Nicolas",
-            "Bird Keeper Robert",
-            "Ninja Boy Lao",
-            "Battle Girl Cyndy",
-            "Parasol Lady Madeline",
-            "Swimmer Jenny",
-            "Picknicker Diana",
-            "Twins Amy & Liv",
-            "Sailor Ernest",
-            "Sailor Cory",
-            "Collector Edwin",
-            "PKMN Breeder Lydia",
-            "PKMN Breeder Isaac",
-            "PKMN Breeder Gabrielle",
-            "PKMN Ranger Catherine",
-            "PKMN Ranger Jackson",
-            "Lass Haley\t",
-            "Bug Catcher James",
-            "Hiker Trent",
-            "Hiker Sawyer",
-            "Young Couple Kira & Dan"});
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(235, 424);
-            this.checkedListBox1.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProfileName,
+            this.TID,
+            this.SID,
+            this.LightningRod,
+            this.Roaming,
+            this.AmountOfTrainers});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(661, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // SubmitButton
+            // ProfileName
             // 
-            this.SubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.ProfileName.HeaderText = "Name";
+            this.ProfileName.Name = "ProfileName";
+            // 
+            // TID
+            // 
+            this.TID.HeaderText = "TID";
+            this.TID.Name = "TID";
+            // 
+            // SID
+            // 
+            this.SID.HeaderText = "SID";
+            this.SID.Name = "SID";
+            // 
+            // LightningRod
+            // 
+            this.LightningRod.HeaderText = "Lightning Rod?";
+            this.LightningRod.Name = "LightningRod";
+            // 
+            // Roaming
+            // 
+            this.Roaming.HeaderText = "Roaming?";
+            this.Roaming.Name = "Roaming";
+            // 
+            // AmountOfTrainers
+            // 
+            this.AmountOfTrainers.HeaderText = "Amount of Trainers";
+            this.AmountOfTrainers.Name = "AmountOfTrainers";
+            // 
+            // NewButton
+            // 
+            this.NewButton.Location = new System.Drawing.Point(12, 12);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(75, 23);
+            this.NewButton.TabIndex = 1;
+            this.NewButton.Text = "New";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Location = new System.Drawing.Point(93, 12);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(75, 23);
+            this.EditButton.TabIndex = 2;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(174, 12);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // DoneButton
+            // 
+            this.DoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SubmitButton.Location = new System.Drawing.Point(12, 478);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(235, 32);
-            this.SubmitButton.TabIndex = 1;
-            this.SubmitButton.Text = "Submit";
-            this.SubmitButton.UseVisualStyleBackColor = true;
-            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
-            // 
-            // SelectButton
-            // 
-            this.SelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SelectButton.Location = new System.Drawing.Point(12, 440);
-            this.SelectButton.Name = "SelectButton";
-            this.SelectButton.Size = new System.Drawing.Size(115, 32);
-            this.SelectButton.TabIndex = 2;
-            this.SelectButton.Text = "Select All";
-            this.SelectButton.UseVisualStyleBackColor = true;
-            this.SelectButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClearButton.Location = new System.Drawing.Point(132, 440);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(115, 32);
-            this.ClearButton.TabIndex = 3;
-            this.ClearButton.Text = "Clear All";
-            this.ClearButton.UseVisualStyleBackColor = true;
-            this.ClearButton.Click += new System.EventHandler(this.button2_Click);
+            this.DoneButton.Location = new System.Drawing.Point(12, 206);
+            this.DoneButton.Name = "DoneButton";
+            this.DoneButton.Size = new System.Drawing.Size(661, 23);
+            this.DoneButton.TabIndex = 4;
+            this.DoneButton.Text = "Done";
+            this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 522);
-            this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.SelectButton);
-            this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(685, 242);
+            this.Controls.Add(this.DoneButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.NewButton);
+            this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Trainers";
+            this.Text = "Profiles";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button SubmitButton;
-        private System.Windows.Forms.Button SelectButton;
-        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button NewButton;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button DoneButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProfileName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LightningRod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Roaming;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountOfTrainers;
     }
 }
