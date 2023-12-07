@@ -118,9 +118,9 @@ namespace PokeNavEggs
 
             uint txor = tid ^ sid;
             PokeRNG rng = new PokeRNG(baserng.seed);
-            result.EggRand = rng.nextUShort() * 100 >> 16;
+            result.EggRand = rng.nextUShort() * 100 / 0xFFFF;
 
-            if (compatability > result.EggRand)
+            if (result.EggRand >= compatability)
             {
                 PokeRNG rng2 = new PokeRNG(frame & 0xFFFF);
                 uint low = (rng.nextUShort() % 0xFFFE) + 1;
