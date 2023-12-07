@@ -120,7 +120,7 @@ namespace PokeNavEggs
             PokeRNG rng = new PokeRNG(baserng.seed);
             result.EggRand = rng.nextUShort() * 100 / 0xFFFF;
 
-            if (result.EggRand >= compatability)
+            if (compatability > result.EggRand)
             {
                 PokeRNG rng2 = new PokeRNG(frame & 0xFFFF);
                 uint low = (rng.nextUShort() % 0xFFFE) + 1;
